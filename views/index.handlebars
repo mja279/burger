@@ -1,24 +1,40 @@
-<h1>Burgers!</h1>
+<div class="container">
+  <div class="row" id="receipt">
+    <div class="col-md-4 d flex-justify-content">
+      <div class="card">
+        <div class="card-header">
+       <h1>Burgers!</h1> 
+       </div>
+       <div class="card-body">
+         POOP - dpmt forget to change this! LOL
+       </div>
+      </div>
+    </div>
+  </div>
+</div>
 
-<h2>What type of burger will you devour?</h2>
 
-<ul>
-  {{#each burgers}}
-    {{#unless devour}}
-      {{> burgers/burger-block devour=true}}
-    {{/unless}}
-  {{/each}}
-</ul>
+<div class="card-body d-flex justify-content-center">
+  <h2>What type of burger will you devour?</h2>
+  <ul class="list-group list-group-flush w-100">
+    {{#each allburgers}}
+      {{#unless devoured}}
+        {{> burger-block avail=true}}
+      {{/unless}}
+    {{/each}}
+  </ul>
+</div>
 
-<h2>Burgers have been devoured!</h2>
-
-<ul>
-  {{#each burgers}}
-    {{#if this.devour}}
-      {{> burgers/burger-block devour=false}}
-    {{/if}}
-  {{/each}}
-</ul>
+<div class="card-body d-flex justify-content-center">
+  <h2>Burgers have been devoured!</h2>
+  <ul class="list-group list-group-flush w-100"> 
+    {{#each allburgers}}
+      {{#if devoured}}
+        {{> burger-block avail=false}}
+      {{/if}}
+    {{/each}}
+  </ul>
+</div>
 
 <h2>Add a Burger</h2>
 <form class="create-form">
@@ -29,9 +45,10 @@
   </div>
 
   <div class="form-group">
-    <label for="sleepy">Devoured?</label><br>
-    <input type="radio" name="devour" value="1" checked> Devoured!<br>
-    <input type="radio" name="devour" value="0"> Gone
+    <label for="devoured">Devoured?</label><br>
+    <input type="radio" name="devoured" value="1" checked> Devoured!
+    <br>
+    <input type="radio" name="devoured" value="0"> Gone
   </div>
 
   <button type="submit">Add Burger</button>
