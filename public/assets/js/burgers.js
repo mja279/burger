@@ -19,10 +19,12 @@ $(function() {
         type: "POST",
         data: newBurger
       }
+      
     } else {
       let newState = {
         devoured: state
       };
+
       url = "/api/burgers/" + id;
       request = {
         type: "PUT",
