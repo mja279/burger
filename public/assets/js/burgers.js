@@ -11,7 +11,7 @@ $(function() {
     if(state == false) {
       let newBurger = {
         name: this.parentElement.previousElementSibling.innerText,
-        state: '0'
+        state: 0
       };
 
       url = "/api/burgers";
