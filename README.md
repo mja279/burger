@@ -12,4 +12,4 @@
 
 * Your app will store every burger in a database, whether devoured or not.
 
-##Check it out! https://rocky-plateau-78676.herokuapp.com/
+## Check it out! https://rocky-plateau-78676.herokuapp.com/
